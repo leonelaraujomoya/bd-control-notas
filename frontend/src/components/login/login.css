@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.containerCard {
+    display: flex;
+    justify-content: center;
+}
+
+.bordeLogin {
+    width: 400px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 12px;
+    border:  2px solid #ADADAD;
+    box-shadow: black 3px 3px 10px;
+}
+
+.titulLogin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.labelLogin {
+    margin-right: 10px;
+}
+
+.spanLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}

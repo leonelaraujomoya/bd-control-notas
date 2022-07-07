@@ -1,0 +1,40 @@
+.myBody {
+	height: 100vh;
+	background: url('../../assets/universidadtransp.jpg') center / 100% 100% no-repeat;
+	margin-top: 60px;
+}
+
+.fondoNavbar {
+	position: fixed;
+	margin-top: -60px;
+	margin-left: -10px;
+	padding: 0;
+	width: 100vw;
+	height: 60px;
+	background-color: #C9C6C6;
+}
+
+.myNavBar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	margin-top: -60px;
+	width: 90%;
+	height: 60px;
+	background-color: #C9C6C6;
+}
+
+.myOptions {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.myOptions > .nav > .nav-item > a{
+	color: #000000 !important;
+}
+
+.areaUsuario {
+	display: flex;
+	align-items: center;
+}
