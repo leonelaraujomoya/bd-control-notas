@@ -6,6 +6,18 @@ import './commun.css';
 export default function Navbar(){
 	const navigate = useNavigate();
 
+	const handleUploadnotes = () => {
+		navigate("/uploadnotes");
+	}
+
+	const handleReportematerias = () => {
+		navigate("/reportematerias");
+	}
+
+	const handleReporteestudiantes = () => {
+		navigate("/reporteestudiantes");
+	}
+
 	const handleCerrarSesion = () => {
 		localStorage.removeItem("nombprof");
 		navigate("/");
@@ -23,15 +35,15 @@ export default function Navbar(){
 				<div className="myOptions">
 					<ul className="nav">
 			  			<li class="nav-item">
-			    			<a className="nav-link active" aria-current="page" href="#">Carga de Notas</a>
+			    			<a className="nav-link active" aria-current="page" href="" onClick={ handleUploadnotes }>Carga de Notas</a>
 			  			</li>
 			  			<li className="nav-item dropdown">
 				          <a className="nav-link dropdown-toggle" href="#" id="navbarSecondaryDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 				            Reportes
 				          </a>
 				          <ul className="dropdown-menu dropdown-menu-secondary" aria-labelledby="navbarSecondaryDropdownMenuLink">
-				            <li><a className="dropdown-item" href="#">Listar Materias</a></li>
-				            <li><a className="dropdown-item" href="#">Listar Estudiantes</a></li>
+				            <li><a className="dropdown-item" href="" onClick={ handleReportematerias }>Listar Materias</a></li>
+				            <li><a className="dropdown-item" href="" onClick={ handleReporteestudiantes }>Listar Estudiantes</a></li>
 				          </ul>
 				        </li>
 					</ul>

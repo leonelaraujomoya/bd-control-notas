@@ -1,6 +1,4 @@
 .myBody {
-	height: 100vh;
-	background: url('../../assets/universidadtransp.jpg') center / 100% 100% no-repeat;
 	margin-top: 60px;
 }
 
@@ -20,9 +18,10 @@
 	justify-content: space-between;
 	position: fixed;
 	margin-top: -60px;
-	width: 90%;
+	width: 92%;
 	height: 60px;
 	background-color: #C9C6C6;
+	margin-left: 4%;
 }
 
 .myOptions {

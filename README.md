@@ -23,15 +23,15 @@ Si deseas hacer una copia de este proyecto en tu equipo, escribe el siguiente co
 Para instalar y ejecutar este proyecto de forma local, es necesario seguir los siguientes pasos:
 
 1.  Clonamos el repositorio en la carpeta de su preferencia.
-2.  Para ejecutar el siguiente paso es necesario tener instalado el NodeJS en su computadora. Vaya a la carpeta bd-control-notas/backend y ejecute npm install.
+2.  Para ejecutar el siguiente paso es necesario tener instalado el NodeJS en su computadora. Vaya a la carpeta bd-control-notas/backend y ejecute ****npm install****.
 3. Para ejecutar el siguiente paso es necesario tener instalado MongoDB en su computadora. Ejecute ****node db-seeder.js**** (estando en la carpeta bd-control-notas/backend) para crear la base de datos y precargar los documentos necesarios.
-4. Vaya a la carpeta bd-control-notas/frontend y ejecute ****npm install && npm run dev****.
+4. Vaya a la carpeta bd-control-notas/frontend y ejecute ****npm install****.
 
 ### Ejecutar la aplicación
 Debes tener dos (2) consolas abiertas, una para ejecutar el backend y la otra para el frontend.
 
 ****Backend:**** desde la carpeta bd-control-notas/backend ejecutas ****node server.js****
 
-****Frontend:**** Desde la carpeta bd-control-notas/frontend ejecutas ****npm start****
+****Frontend:**** Desde la carpeta bd-control-notas/frontend ejecutas ****npm start**** y desde el navegador vas a http://localhost:3000/
 
 ****NOTA:**** El usuario precargado es ****victor**** y la contraseña es ****123456****

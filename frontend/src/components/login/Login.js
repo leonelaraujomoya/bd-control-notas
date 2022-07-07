@@ -31,7 +31,7 @@ export default function Login(){
 				usuario: usuario,
 				clave: clave
 			}).then(res => {
-				if(res.data.result == 0){
+				if(res.data.result === 0){
 					localStorage.setItem("nombprof", res.data.nombprof);
 					navigate("/home");
 				}else{
@@ -46,7 +46,7 @@ export default function Login(){
 			})
 			.catch(err => console.log(err));
 		}else{
-			if(usuario.trim().length == 0) {
+			if(usuario.trim().length === 0) {
 				Swal.fire({
 				  position: 'center',
 				  icon: 'error',
