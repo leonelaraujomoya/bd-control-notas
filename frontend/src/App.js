@@ -2,9 +2,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './components/login/Login';
 import Home from './components/home/Home';
 import Uploadnotes from './components/uploadnotes/Uploadnotes';
-import Reportematerias from './components/reportematerias/Reportematerias';
-import Reporteestudiantes from './components/reporteestudiantes/Reporteestudiantes';
+import Subjectreport from './components/subjectreport/Subjectreport';
+import Studentreport from './components/studentreport/Studentreport';
 import VerifyAuthentication from './components/verifyauthentication/VerifyAuthentication';
+import Uploadplan from './components/uploadnotes/Uploadplan';
+import Seeplan from './components/uploadnotes/Seeplan';
 import './App.css';
 
 function App() {
@@ -23,14 +25,24 @@ function App() {
               <Uploadnotes /> 
             </VerifyAuthentication>
           } />
-          <Route path="/reportematerias" element={ 
+          <Route path="/subjectreport" element={ 
             <VerifyAuthentication>
-              <Reportematerias /> 
+              <Subjectreport /> 
             </VerifyAuthentication>
           } />
-          <Route path="/reporteestudiantes" element={ 
+          <Route path="/studentreport" element={ 
             <VerifyAuthentication>
-              <Reporteestudiantes /> 
+              <Studentreport /> 
+            </VerifyAuthentication>
+          } />
+          <Route path="/uploadplan" element={ 
+            <VerifyAuthentication>
+              <Uploadplan /> 
+            </VerifyAuthentication>
+          } />
+          <Route path="/seeplan" element={ 
+            <VerifyAuthentication>
+              <Seeplan /> 
             </VerifyAuthentication>
           } />
           <Route path="*" element={ <Login /> } />

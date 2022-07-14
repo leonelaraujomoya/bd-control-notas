@@ -6,16 +6,19 @@ import './commun.css';
 export default function Navbar(){
 	const navigate = useNavigate();
 
-	const handleUploadnotes = () => {
+	const handleUploadnotes = (e) => {
+		e.preventDefault();
 		navigate("/uploadnotes");
 	}
 
-	const handleReportematerias = () => {
-		navigate("/reportematerias");
+	const handleSubjectreport = (e) => {
+		e.preventDefault();
+		navigate("/subjectreport");
 	}
 
-	const handleReporteestudiantes = () => {
-		navigate("/reporteestudiantes");
+	const handleStudentreport = (e) => {
+		e.preventDefault();
+		navigate("/studentreport");
 	}
 
 	const handleCerrarSesion = () => {
@@ -29,7 +32,7 @@ export default function Navbar(){
 			<div className="myNavBar">
 				<a className="navbar-brand" href="/home">
 				<div className="imgNav">
-					<img src={ logoUDO } alt="" width="40px" height="40px" />
+					<img src={ logoUDO } alt="" width="50px" height="50px" />
 				</div>
 				</a>
 				<div className="myOptions">
@@ -42,8 +45,8 @@ export default function Navbar(){
 				            Reportes
 				          </a>
 				          <ul className="dropdown-menu dropdown-menu-secondary" aria-labelledby="navbarSecondaryDropdownMenuLink">
-				            <li><a className="dropdown-item" href="" onClick={ handleReportematerias }>Listar Materias</a></li>
-				            <li><a className="dropdown-item" href="" onClick={ handleReporteestudiantes }>Listar Estudiantes</a></li>
+				            <li><a className="dropdown-item" href="" onClick={ handleSubjectreport }>Listar Materias</a></li>
+				            <li><a className="dropdown-item" href="" onClick={ handleStudentreport }>Listar Estudiantes</a></li>
 				          </ul>
 				        </li>
 					</ul>

@@ -1,3 +1,4 @@
+/* Estilos del Navbar */
 .myBody {
 	margin-top: 60px;
 }
@@ -37,3 +38,99 @@
 	display: flex;
 	align-items: center;
 }
+
+/* Estilos comunes */
+.titulosComponentes {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	color: white;
+	text-shadow: black 1px 1px 5px;
+	line-height: 80px;
+}
+
+.contentComponentes {
+	display: flex;
+	justify-content: left;
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+	height: auto;
+	border: 1px solid #A3A3A3;
+	border-radius: 4px;
+	box-shadow: black 3px 3px 10px;
+	background-color: #F3F2F2;
+	padding: 16px 50px;
+}
+
+.grupoPeriodo {
+	display: flex;
+	align-items: center;
+	max-width: 196px;
+}
+
+#periodo {
+	margin-left: 10px;
+}
+
+.fondoEncabezado {
+	background-color: #7171AF;
+}
+
+.colAlinea {
+	text-align: left;
+}
+
+.contenidoOpciones {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.filasMateria {
+	height: 10px !important;
+}
+
+.colCodigo {
+	text-align: center;
+	min-width: 40px;
+	width: 40px;
+}
+
+.colOpciones {
+	width: 196px;
+}
+
+.colMateria {
+	width: 496px;
+}
+
+.colSeccion {
+	width: 30px;
+}
+
+.materiaelegida {
+	text-align: left;
+	color: #2D2D6D;
+}
+
+.tablasPlan {
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+}
+
+.colNum {
+	text-align: center;
+	width: 80px;
+}
+
+.colNumeros {
+	width: 120px;
+}
+
+.controltextPlan {
+	width: 80px;
+	margin-left: 50px;
+}
+

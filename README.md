@@ -34,4 +34,4 @@ Debes tener dos (2) consolas abiertas, una para ejecutar el backend y la otra pa
 
 ****Frontend:**** Desde la carpeta bd-control-notas/frontend ejecutas ****npm start**** y desde el navegador vas a http://localhost:3000/
 
-****NOTA:**** El usuario precargado es ****victor**** y la contraseña es ****123456****
+****NOTA:**** El usuario precargado es ****victor****, la contraseña es ****123456**** y el periodo ****2022-1****
