@@ -273,11 +273,11 @@ export default function Uploadplan(){
 						<table className="table table-striped">
 							<thead className="fondoEncabezado">
 								<tr>
-									<th scope="col" className="colNum">{ "   " }</th>
-									<th scope="col" className="colNumeros">PARCIALES</th>
-									<th scope="col" className="colNumeros">PRACTICAS</th>
-									<th scope="col" className="colNumeros">TRABAJOS</th>
-									<th scope="col" className="colNumeros">EXPOSICIONES</th>
+									<th scope="col" className="colNum fondoEncabezado2">{ "   " }</th>
+									<th scope="col" className="colNumeros fondoEncabezado2">PARCIALES</th>
+									<th scope="col" className="colNumeros fondoEncabezado2">PRACTICAS</th>
+									<th scope="col" className="colNumeros fondoEncabezado2">TRABAJOS</th>
+									<th scope="col" className="colNumeros fondoEncabezado2">EXPOSICIONES</th>
 								</tr>
 							</thead> 
 							<tbody>
@@ -302,11 +302,11 @@ export default function Uploadplan(){
 							<table className="table table-striped">
 								<thead className="fondoEncabezado">
 									<tr>
-										<th scope="col" className="colNum">{ "   " }</th>
-										<th scope="col" className="colNumeros">PARCIALES</th>
-										<th scope="col" className="colNumeros">PRACTICAS</th>
-										<th scope="col" className="colNumeros">TRABAJOS</th>
-										<th scope="col" className="colNumeros">EXPOSICIONES</th>
+										<th scope="col" className="colNum fondoEncabezado2">{ "   " }</th>
+										<th scope="col" className="colNumeros fondoEncabezado2">PARCIALES</th>
+										<th scope="col" className="colNumeros fondoEncabezado2">PRACTICAS</th>
+										<th scope="col" className="colNumeros fondoEncabezado2">TRABAJOS</th>
+										<th scope="col" className="colNumeros fondoEncabezado2">EXPOSICIONES</th>
 									</tr>
 								</thead> 
 								<tbody>

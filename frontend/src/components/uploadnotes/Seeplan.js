@@ -217,43 +217,53 @@ export default function Seeplan(){
 							  timer: 1900
 							});
 						}else{
-							axios.post("http://localhost:5000/api/updateplaneval", {
-								periodo: localStorage.getItem('miperiodo'),
-								codmat: localStorage.getItem('micodmateria'),
-								numsec: localStorage.getItem('miseccion'),
-								numparc: nparciales,
-								porparc: pparciales,
-								numpract: npracticas,
-								porpract: ppracticas,
-								numtrab: ntrabajos,
-								portrab: ptrabajos,
-								numexpo: nexposiciones,
-								porexpo: pexposiciones
-							}).then(res => {
-								if(res.data.result === 0){
-									Swal.fire({
-									  position: 'center',
-									  icon: 'success',
-									  title: "El plan de evaluación ha sido actualizado...",
-									  showConfirmButton: false,
-									  timer: 1500
-									});
-									//
-									localStorage.setItem("minparciales", nparciales);
-									localStorage.setItem("mipparciales", pparciales);
-									localStorage.setItem("minpracticas", npracticas);
-									localStorage.setItem("mippracticas", ppracticas);
-									localStorage.setItem("mintrabajos", ntrabajos);
-									localStorage.setItem("miptrabajos", ptrabajos);
-									localStorage.setItem("minexposiciones", nexposiciones);
-									localStorage.setItem("mipexposiciones", pexposiciones);
-									//
-									setInputdisable(true);
-									setAccion('Modificar');
-									setIcono('fa-solid fa-edit');
-								}
-							})
-							.catch(err => console.log(err));
+							if((parseFloat(pparciales) + parseFloat(ppracticas) + parseFloat(ptrabajos) + parseFloat(pexposiciones)) < 100){
+								Swal.fire({
+								  position: 'center',
+								  icon: 'error',
+								  title: "Debe haber 100% entre todos los porcentajes de evaluacion...",
+								  showConfirmButton: false,
+								  timer: 1900
+								});
+							}else{
+								axios.post("http://localhost:5000/api/updateplaneval", {
+									periodo: localStorage.getItem('miperiodo'),
+									codmat: localStorage.getItem('micodmateria'),
+									numsec: localStorage.getItem('miseccion'),
+									numparc: nparciales,
+									porparc: pparciales,
+									numpract: npracticas,
+									porpract: ppracticas,
+									numtrab: ntrabajos,
+									portrab: ptrabajos,
+									numexpo: nexposiciones,
+									porexpo: pexposiciones
+								}).then(res => {
+									if(res.data.result === 0){
+										Swal.fire({
+										  position: 'center',
+										  icon: 'success',
+										  title: "El plan de evaluación ha sido actualizado...",
+										  showConfirmButton: false,
+										  timer: 1500
+										});
+										//
+										localStorage.setItem("minparciales", nparciales);
+										localStorage.setItem("mipparciales", pparciales);
+										localStorage.setItem("minpracticas", npracticas);
+										localStorage.setItem("mippracticas", ppracticas);
+										localStorage.setItem("mintrabajos", ntrabajos);
+										localStorage.setItem("miptrabajos", ptrabajos);
+										localStorage.setItem("minexposiciones", nexposiciones);
+										localStorage.setItem("mipexposiciones", pexposiciones);
+										//
+										setInputdisable(true);
+										setAccion('Modificar');
+										setIcono('fa-solid fa-edit');
+									}
+								})
+								.catch(err => console.log(err));
+							}
 						}
 					}
 				}
@@ -293,11 +303,11 @@ export default function Seeplan(){
 						<table className="table table-striped">
 							<thead className="fondoEncabezado">
 								<tr>
-									<th scope="col" className="colNum">{ "   " }</th>
-									<th scope="col" className="colNumeros">PARCIALES</th>
-									<th scope="col" className="colNumeros">PRACTICAS</th>
-									<th scope="col" className="colNumeros">TRABAJOS</th>
-									<th scope="col" className="colNumeros">EXPOSICIONES</th>
+									<th scope="col" className="colNum fondoEncabezado2">{ "   " }</th>
+									<th scope="col" className="colNumeros fondoEncabezado2">PARCIALES</th>
+									<th scope="col" className="colNumeros fondoEncabezado2">PRACTICAS</th>
+									<th scope="col" className="colNumeros fondoEncabezado2">TRABAJOS</th>
+									<th scope="col" className="colNumeros fondoEncabezado2">EXPOSICIONES</th>
 								</tr>
 							</thead> 
 							<tbody>
@@ -322,11 +332,11 @@ export default function Seeplan(){
 							<table className="table table-striped">
 								<thead className="fondoEncabezado">
 									<tr>
-										<th scope="col" className="colNum">{ "   " }</th>
-										<th scope="col" className="colNumeros">PARCIALES</th>
-										<th scope="col" className="colNumeros">PRACTICAS</th>
-										<th scope="col" className="colNumeros">TRABAJOS</th>
-										<th scope="col" className="colNumeros">EXPOSICIONES</th>
+										<th scope="col" className="colNum fondoEncabezado2">{ "   " }</th>
+										<th scope="col" className="colNumeros fondoEncabezado2">PARCIALES</th>
+										<th scope="col" className="colNumeros fondoEncabezado2">PRACTICAS</th>
+										<th scope="col" className="colNumeros fondoEncabezado2">TRABAJOS</th>
+										<th scope="col" className="colNumeros fondoEncabezado2">EXPOSICIONES</th>
 									</tr>
 								</thead> 
 								<tbody>

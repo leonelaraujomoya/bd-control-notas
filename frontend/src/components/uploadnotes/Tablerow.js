@@ -30,7 +30,19 @@ export default function Tablerow({ rowMateria }) {
 	}
 
 	const handleCargarnotas = () => {
-		
+		localStorage.setItem("miperiodo", rowMateria.codperiodo);
+		localStorage.setItem("micodmateria", rowMateria.materia.codmat);
+		localStorage.setItem("mimateria", rowMateria.materia.nombremat);
+		localStorage.setItem("miseccion", rowMateria.numsec);
+		localStorage.setItem("minparciales", rowMateria.numparc);
+		localStorage.setItem("mipparciales", rowMateria.porparc);
+		localStorage.setItem("minpracticas", rowMateria.numpract);
+		localStorage.setItem("mippracticas", rowMateria.porpract);
+		localStorage.setItem("mintrabajos", rowMateria.numtrab);
+		localStorage.setItem("miptrabajos", rowMateria.portrab);
+		localStorage.setItem("minexposiciones", rowMateria.numexpo);
+		localStorage.setItem("mipexposiciones", rowMateria.porexpo);
+		navigate("/uploadevaluations");
 	}
 	
 	return(

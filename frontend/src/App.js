@@ -7,6 +7,7 @@ import Studentreport from './components/studentreport/Studentreport';
 import VerifyAuthentication from './components/verifyauthentication/VerifyAuthentication';
 import Uploadplan from './components/uploadnotes/Uploadplan';
 import Seeplan from './components/uploadnotes/Seeplan';
+import Uploadevaluations from './components/uploadnotes/Uploadevaluations';
 import './App.css';
 
 function App() {
@@ -43,6 +44,11 @@ function App() {
           <Route path="/seeplan" element={ 
             <VerifyAuthentication>
               <Seeplan /> 
+            </VerifyAuthentication>
+          } />
+          <Route path="/uploadevaluations" element={ 
+            <VerifyAuthentication>
+              <Uploadevaluations /> 
             </VerifyAuthentication>
           } />
           <Route path="*" element={ <Login /> } />

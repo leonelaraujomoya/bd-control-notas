@@ -85,10 +85,10 @@ export default function Uploadnotes(){
 						<table className="table table-striped">
 							<thead className="fondoEncabezado">
 								<tr>
-									<th scope="col" className="colCodigo">COD MAT</th>
-									<th scope="col" className="colMateria">MATERIA</th>
-									<th scope="col" className="colSeccion">SECCION</th>
-									<th scope="col" className="colOpciones">OPCIONES</th>
+									<th scope="col" className="colCodigo fondoEncabezado2">COD MAT</th>
+									<th scope="col" className="colMateria fondoEncabezado2">MATERIA</th>
+									<th scope="col" className="colSeccion fondoEncabezado2">SECCION</th>
+									<th scope="col" className="colOpciones fondoEncabezado2">OPCIONES</th>
 								</tr>
 							</thead> 
 							<tbody>
