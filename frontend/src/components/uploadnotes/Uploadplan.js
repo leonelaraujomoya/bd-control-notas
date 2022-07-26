@@ -246,7 +246,7 @@ export default function Uploadplan(){
 							  timer: 1500
 							});
 							localStorage.setItem("tmpper", localStorage.getItem('miperiodo'));
-							navigate(-1);
+							navigate('/uploadnotes'); 
 						}
 					})
 					.catch(err => console.log(err));

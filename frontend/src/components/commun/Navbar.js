@@ -38,26 +38,26 @@ export default function Navbar(){
 				<div className="myOptions">
 					<ul className="nav">
 			  			<li class="nav-item">
-			    			<a className="nav-link active" aria-current="page" href="" onClick={ handleUploadnotes }>Carga de Notas</a>
+			    			<a className="nav-link active" aria-current="page" href="/uploadnotes" onClick={ handleUploadnotes }>Carga de Notas</a>
 			  			</li>
 			  			<li className="nav-item dropdown">
-				          <a className="nav-link dropdown-toggle" href="#" id="navbarSecondaryDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				          <a className="nav-link dropdown-toggle" href="/" id="navbarSecondaryDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 				            Reportes
 				          </a>
 				          <ul className="dropdown-menu dropdown-menu-secondary" aria-labelledby="navbarSecondaryDropdownMenuLink">
-				            <li><a className="dropdown-item" href="" onClick={ handleSubjectreport }>Listar Materias</a></li>
-				            <li><a className="dropdown-item" href="" onClick={ handleStudentreport }>Listar Estudiantes</a></li>
+				            <li><a className="dropdown-item" href="/subjectreport" onClick={ handleSubjectreport }>Listar Materias</a></li>
+				            <li><a className="dropdown-item" href="/studentreport" onClick={ handleStudentreport }>Listar Estudiantes</a></li>
 				          </ul>
 				        </li>
 					</ul>
 					<div className="areaUsuario">
 						<span className= "fa-solid fa-user" style={{ fontSize: "30px", marginLeft: "140px"}}></span>
 						<div className="nav-item dropdown">
-				          <a className="nav-link dropdown-toggle" href="#" id="navbarSecondaryDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				          <a className="nav-link dropdown-toggle" href="/" id="navbarSecondaryDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 				            { localStorage.getItem('nombprof') }
 				          </a>
 				          <ul className="dropdown-menu dropdown-menu-secondary" aria-labelledby="navbarSecondaryDropdownMenuLink">
-				            <li><a className="dropdown-item" href="" onClick={ handleCerrarSesion }>Cerrar Sesión</a></li>
+				            <li><a className="dropdown-item" href="/" onClick={ handleCerrarSesion }>Cerrar Sesión</a></li>
 				          </ul>
 				        </div>
 					</div>

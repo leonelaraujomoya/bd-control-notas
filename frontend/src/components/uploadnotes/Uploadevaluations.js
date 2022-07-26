@@ -37,6 +37,8 @@ export default function Uploadevaluations(){
 	const [ingreso, setIngreso] = useState(false);
 	const [refresca, setRefresca] = useState(false);
 
+	const [guardo, setGuardo] = useState(false);
+
 	useEffect(() => {
 		setNparciales(localStorage.getItem('minparciales'));
 		setNpracticas(localStorage.getItem('minpracticas'));
@@ -730,7 +732,8 @@ export default function Uploadevaluations(){
 						filtro
 					).catch(err => console.log(err));
 					//
-					refrescaTabla();
+					setGuardo(!guardo);
+					//refrescaTabla();
 					//
 					setCedulaedit("");
 					setEstudianteeditado("");
@@ -771,6 +774,11 @@ export default function Uploadevaluations(){
 			}
 		}
 	}
+
+	useEffect(() => {
+		refrescaTabla();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [guardo]);
 
 	const refrescaTabla = () => {
 		setEstudiantes([]);

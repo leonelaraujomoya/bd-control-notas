@@ -12,6 +12,9 @@ const modelPlaneseval = require('../models/planeval');
 // Importamos el modelo profesores
 const modelCarganotas = require('../models/carganotas');
 
+// Importamos el modelo secciones
+const modelSecciones = require('../models/secciones');
+
 // Configuramos nuestras rutas
 router.post('/login', async (req, res) => {
 	const docProfesor = await modelProfesores.findOne({ nombreusuario: req.body.usuario });
@@ -220,5 +223,48 @@ router.post('/actualizanota', async (req, res) => {
 	}
 });
 
+router.post('/secciones', async (req, res) => {
+	await modelSecciones.find({ codperiodo: req.body.periodo }).clone().then((docs, err) => {
+		// verificamos si docs esta vacio
+		if(!(Object.keys(docs).length === 0)){  
+		  	res.send(
+				{ 
+					result: 0,
+					docs: docs
+				}
+			);
+		}else{
+		  	res.send(
+				{ 
+					result: 1,
+					msg: 'Codigo de período no registrado...' 
+				}
+			);
+		}
+	});
+});
+
+router.post('/materiaestudiantes', async (req, res) => {
+	await modelCarganotas.find({ 
+		'seccion.codperiodo': req.body.periodo
+	}).clone().then((docs, err) => {
+		// verificamos si docs esta vacio
+		if(!(Object.keys(docs).length === 0)){  
+		  	res.send(
+				{ 
+					result: 0,
+					docnotas: docs
+				}
+			);
+		}else{
+		  	res.send(
+				{ 
+					result: 1,
+					msg: 'Periodo no registrado...' 
+				}
+			);
+		}
+	});
+});
 
 module.exports = router;
